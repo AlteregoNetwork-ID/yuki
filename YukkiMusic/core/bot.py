@@ -34,8 +34,6 @@ from pyrogram.errors import (
     FloodWait,
     MessageNotModified,
     MessageIdInvalid,
-    ChatSendMediaForbidden,
-    ChatSendPhotosForbidden,
     ChatWriteForbidden,
 )
 from pyrogram.handlers import MessageHandler
@@ -62,8 +60,6 @@ class YukkiBot(Client):
                     await asyncio.sleep(e.value)
                 except (
                     ChatWriteForbidden,
-                    ChatSendMediaForbidden,
-                    ChatSendPhotosForbidden,
                     MessageNotModified,
                     MessageIdInvalid,
                 ):
